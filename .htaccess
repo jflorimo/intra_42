@@ -1,0 +1,11 @@
+Options +SymLinksIfOwnerMatch
+RewriteEngine on
+
+#interdire l'acces au dossier 'system' et permettre de creer un controller 'system.php'
+RewriteCond %{REQUEST_URI} ^system.*
+RewriteRule ^(.*)$	index.php/$1 	[L]
+
+#reecriture si ce n'est ni un fichier ni un dossier
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$	index.php/$1 	[L]

@@ -389,6 +389,60 @@ body
 {
 	color:#FFFFFF;
 }
+
+/*		-----				*/
+/*		----------			*/
+/*		BLOCK-BOARD-FORUM	*/
+/*		----------			*/
+/*		-----				*/
+#block-board-forum
+{
+	width:16em;
+	height:100%;
+	position:absolute;
+	border-right:0.1em solid #2A2A38;
+}
+.block-name-categories
+{
+	width:16em;
+}
+.block-name-categories:hover
+{
+	background-color:#D6D2E5;
+	cursor:pointer;
+}
+.name1-categories-forum
+{
+	color:#486182;
+	margin-left:1em;
+	font-family:"Oswald";
+	font-size:1.2em;
+}
+.name2-categories-forum
+{
+	color:#5C9299;
+	margin-left:1em;
+	font-family:"Oswald";
+	font-size:1.2em;
+}
+.block-name-souscategories
+{
+	width:16em;
+}
+.block-name-souscategories:hover
+{
+	background-color:#D6D2E5;
+	cursor:pointer;
+}
+.name-souscategories-forum
+{
+	margin-left: 2em;
+	font-size:1em;
+	font-family:"Poiret One";
+	color:#2A2A38;
+}
+
+
 /*		-----				*/
 /*		----------			*/
 /*		BLOCK-BOARD-ADMINS	*/

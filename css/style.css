@@ -392,7 +392,7 @@ body
 
 /*		-----				*/
 /*		----------			*/
-/*		BLOCK-BOARD-FORUM	*/
+/*		BLOCK-FORUM			*/
 /*		----------			*/
 /*		-----				*/
 #block-board-forum
@@ -400,6 +400,7 @@ body
 	width:16em;
 	height:100%;
 	position:absolute;
+	padding-top: 1em;
 	border-right:0.1em solid #2A2A38;
 }
 .block-name-categories
@@ -440,6 +441,12 @@ body
 	font-size:1em;
 	font-family:"Poiret One";
 	color:#2A2A38;
+}
+#block-threads-forum
+{
+	height:100%;
+	position:absolute;
+	left:17em;
 }
 
 
@@ -500,6 +507,48 @@ body
 	font-family:"Oswald";
 	font-size:1.5em;
 	margin-bottom: 1.5em;
+}
+#form-add-category
+{
+	text-align: center;
+	margin-bottom: 2em;
+}
+#title-add-category
+{
+	color:#5C9299;
+	font-family:"Oswald";
+	font-size:1.2em;
+}
+#label-name-category
+{
+	margin-left:2em;
+	font-family:"Poiret One";
+	color:#2A2A38;
+}
+#input-name-category
+{
+	width:15em;
+	margin-left:2em;
+	border:none;
+	border-bottom:0.1em solid #2A2A38;
+	outline:none;
+	background-color:transparent;
+	color:#5C9299;
+	font-family:"Oswald";
+}
+#submit-add-category
+{
+	margin-left:2em;
+	border:0.1em solid #2A2A38;
+	outline:none;
+	background-color:transparent;
+	color:#5C9299;
+	font-family:"Oswald";
+	font-size:1em;
+}
+#submit-add-category:hover
+{
+	cursor:pointer;
 }
 #block-info-categories
 {

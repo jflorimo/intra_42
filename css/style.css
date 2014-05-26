@@ -448,7 +448,97 @@ body
 	position:absolute;
 	left:17em;
 }
-
+#block-threads-categories
+{
+	width:100%;
+}
+#title-threads-category
+{
+	font-size:1.5em;
+	font-family:"Poiret One";
+	color:#2A2A38;
+}
+#title-add-thread
+{
+	margin-top: 1em;
+	font-size:1em;
+	font-family:"Oswald";
+	color:#5C9299;
+}
+#label-subject-thread
+{
+	font-family:"Poiret One";
+	color:#2A2A38;
+}
+#input-subject-thread
+{
+	width:15em;
+	margin-left:2em;
+	border:none;
+	border-bottom:0.1em solid #2A2A38;
+	outline:none;
+	background-color:transparent;
+	color:#5C9299;
+	font-family:"Oswald";
+}
+#textarea-description-thread
+{
+	margin-top:1em;
+    width:40em;
+    height:10em;
+    max-width:40em;
+    max-height:10em;
+    border-left:0.1em solid #2A2A38;
+    border-bottom:0.1em solid #2A2A38;
+    font-family: "Oswald";
+    font-size:0.9em;
+    color:#5C9299;
+    background-color: transparent;
+    outline:none;
+}
+#submit-add-thread
+{
+	margin-left: -0.04em;
+	position:absolute;
+	top:16.5em;
+	border:0.1em solid #2A2A38;
+	outline:none;
+	background-color:transparent;
+	color:#5C9299;
+	font-family:"Oswald";
+	font-size:1em;
+}
+#submit-add-thread:hover
+{
+	cursor:pointer;
+}
+#block-list-threads
+{
+	position:absolute;
+	top:20em;
+}
+.block-this-thread
+{
+	vertical-align: center;
+	width:36.5em;
+	height:2.5em;
+	margin-bottom:1em;
+	background-color:#2A2A38;
+}
+.block-this-thread:hover
+{
+	background-color:#486182;
+	cursor:pointer;
+}
+.subject-thread
+{
+	position:relative;
+	top:0.5em;
+	left: 1em;
+	color:#FFFFFF;
+	font-family:"Oswald";
+	font-size:1em;
+}
 
 /*		-----				*/
 /*		----------			*/

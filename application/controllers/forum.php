@@ -3,6 +3,8 @@ class Forum extends CI_Controller
 {
 	function index()
 	{
+		if (!($this->session->userdata("uid")))
+			redirect("/");
 		$this->load->model("CategoriesModel");
 		$this->load->model("SouscategoriesModel");
 		$this->load->view("main/header");
@@ -65,6 +67,34 @@ class Forum extends CI_Controller
 			$data["souscategory"] = $this->SouscategoriesModel->this_souscategory($this->input->post("idsouscategory"));
 			$data["threads"] = $this->ThreadsModel->threads_by_souscategory($this->input->post("idsouscategory"));
 			$this->load->view("ajax/ajax-threads-souscategory", $data);
+		}
+	}
+
+	function ajax_this_thread()
+	{
+		$this->load->model("ThreadsModel");
+		$this->load->model("AnswerthreadsModel");
+		if ($this->input->post("idthread"))
+		{
+			$data["thread"] = $this->ThreadsModel->this_thread($this->input->post("idthread"));
+			$data["answers"] = $this->AnswerthreadsModel->answers_by_thread($this->input->post("idthread"));
+			$this->load->view("ajax/ajax-this-thread", $data);
+		}
+	}
+
+	function ajax_add_answer_thread()
+	{
+		$this->load->model("AnswerthreadsModel");
+		if ($this->input->post("answer"))
+		{
+			$data = array(
+				"answer"=>$this->input->post("answer"),
+				"uid"=>$this->session->userdata["uid"],
+				"id_threads"=>$this->input->post("id_thread")
+			);
+			$this->AnswerthreadsModel->insert_answer($data);
+			$data2["answers"] = $this->AnswerthreadsModel->answers_by_thread($this->input->post("id_thread"));
+			$this->load->view("ajax/ajax-add-answer", $data2);
 		}
 	}
 }

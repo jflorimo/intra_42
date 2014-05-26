@@ -18,5 +18,11 @@ class ThreadsModel extends CI_Model
 		$query = $this->db->select("*")->from("threads")->where("id_souscategories", $id_souscategory)->get();
 		return $query->result();
 	}
+
+	public function this_thread($id)
+	{
+		$query = $this->db->select("*")->from("threads")->where("id", $id)->get();
+		return $query->result();
+	}
 }
 ?>

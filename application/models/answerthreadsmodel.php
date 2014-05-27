@@ -12,5 +12,11 @@ class AnswerthreadsModel extends CI_Model
 		$query = $this->db->select("*")->from("answer_threads")->where("id_threads", $id_thread)->get();
 		return $query->result();
 	}
+
+	function this_answer($id)
+	{
+		$query = $this->db->select("*")->from("answer_threads")->where("id", $id)->get();
+		return $query->result();
+	}
 }
 ?>

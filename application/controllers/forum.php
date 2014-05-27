@@ -97,4 +97,32 @@ class Forum extends CI_Controller
 			$this->load->view("ajax/ajax-add-answer", $data2);
 		}
 	}
+
+	function ajax_list_comments()
+	{
+		$this->load->model("AnswerthreadsModel");
+		$this->load->model("CommentModel");
+		if ($this->input->post("id_answer"))
+		{
+			$data["answer"] = $this->AnswerthreadsModel->this_answer($this->input->post("id_answer"));
+			$data["comments"] = $this->CommentModel->comments_by_answer($this->input->post("id_answer"));
+			$this->load->view("ajax/ajax-list-comments", $data);
+		}
+	}
+
+	function ajax_add_comment_answer()
+	{
+		$this->load->model("CommentModel");
+		if ($this->input->post("id_answer"))
+		{
+			$data = array (
+				"comment" => $this->input->post("comment"),
+				"uid" => $this->session->userdata["uid"],
+				"id_answer_threads" => $this->input->post("id_answer")
+			);
+			$this->CommentModel->insert_comment($data);
+			$data2["comments"] = $this->CommentModel->comments_by_answer($this->input->post("id_answer"));
+			$this->load->view("ajax/ajax-add-comment-answer", $data2);
+		}
+	}
 }

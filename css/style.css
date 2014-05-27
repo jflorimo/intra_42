@@ -539,6 +539,156 @@ body
 	font-family:"Oswald";
 	font-size:1em;
 }
+#block-thread-subject
+{
+	width:60em;
+	min-height:10em;
+	margin-top:1em;
+	border:0.1em solid #2A2A38;
+	border-radius: 5px 5px;
+	-moz-border-radius: 5px 5px;
+	-webkit-border-radius: 5px 5px;
+}
+#title-threads-subject
+{
+	background-color: #486182;
+	padding-top:0.5em;
+	padding-bottom:0.5em;
+	text-align:center;
+	border-bottom:0.1em solid #2A2A38;
+	font-size:1.2em;
+	font-family:"Poiret One";
+	color:#FFFFFF;
+}
+#title-threads-description
+{
+	padding:0.8em;
+	text-align:center;
+	font-family: "Oswald";
+    font-size:0.9em;
+    color:#5C9299;
+}
+#title-threads-uid
+{
+	margin-left:48em;
+	font-size:1em;
+	font-family:"Poiret One";
+	color:#2A2A38;
+	margin-bottom: 0.5em;
+}
+.block-this-answer
+{
+	width:60em;
+	margin-top:1em;
+	border:0.1em solid #2A2A38;
+	border-radius: 5px 5px;
+	-moz-border-radius: 5px 5px;
+	-webkit-border-radius: 5px 5px;
+}
+.block-this-answer:hover
+{
+	background-color: #E7ECFA;
+	cursor: pointer;
+}
+.text-answer
+{
+	padding:0.8em;
+	text-align:center;
+	font-family: "Oswald";
+    font-size:0.9em;
+    color:#5C9299;
+}
+.text-uid
+{
+	margin-left:48em;
+	padding-bottom: 0.5em;
+	font-size:1em;
+	font-family:"Poiret One";
+	color:#2A2A38;
+}
+#title-add-answer
+{
+	margin-top: 1em;
+	font-size:1em;
+	font-family:"Oswald";
+	color:#5C9299;
+}
+#textarea-answer-thread
+{
+	margin-top:1em;
+    width:45em;
+    height:10em;
+    max-width:45em;
+    max-height:10em;
+    border-left:0.1em solid #2A2A38;
+    border-bottom:0.1em solid #2A2A38;
+    font-family: "Oswald";
+    font-size:0.9em;
+    color:#5C9299;
+    background-color: transparent;
+    outline:none;
+}
+#submit-add-answer
+{
+	top:16.5em;
+	border:0.1em solid #2A2A38;
+	outline:none;
+	background-color:transparent;
+	color:#5C9299;
+	font-family:"Oswald";
+	font-size:1em;
+	margin-bottom: 4em;
+}
+#submit-add-answer:hover
+{
+	cursor:pointer;
+}
+
+#title-add-comment
+{
+	margin-top: 1em;
+	font-size:1em;
+	font-family:"Oswald";
+	color:#5C9299;
+}
+#textarea-comment-answer
+{
+	margin-top:1em;
+    width:45em;
+    height:10em;
+    max-width:45em;
+    max-height:10em;
+    border-left:0.1em solid #2A2A38;
+    border-bottom:0.1em solid #2A2A38;
+    font-family: "Oswald";
+    font-size:0.9em;
+    color:#5C9299;
+    background-color: transparent;
+    outline:none;
+}
+#submit-add-comment
+{
+	top:16.5em;
+	border:0.1em solid #2A2A38;
+	outline:none;
+	background-color:transparent;
+	color:#5C9299;
+	font-family:"Oswald";
+	font-size:1em;
+	margin-bottom: 4em;
+}
+#submit-add-comment:hover
+{
+	cursor:pointer;
+}
+
+
+#block-list-comment
+{
+	position:absolute;
+	top:1em;
+	left:65em;
+}
 
 /*		-----				*/
 /*		----------			*/

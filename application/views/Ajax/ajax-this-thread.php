@@ -18,13 +18,13 @@
 <div id="block-thread-subject">
 	<div id="title-threads-subject"><?php echo $thread[0]->subject; ?></div>
 	<div id="title-threads-description"><?php echo $thread[0]->description; ?></div>
-	<div id="title-threads-uid">Posté par <?php echo $thread[0]->uid; ?></div>
+	<div id="title-threads-uid">Posted by  <?php echo $thread[0]->uid; ?></div>
 </div>
 <div id="block-list-answer">
 	<?php foreach ($answers as $row): ?>
 		<div class="block-this-answer" value="<?php echo $row->id; ?>">
 			<div class="text-answer"><?php echo $row->answer; ?></div>
-			<div class="text-uid">Posté par <?php echo $row->uid; ?></div>
+			<div class="text-uid">Posted by  <?php echo $row->uid; ?></div>
 		</div>
 	<?php endforeach; ?>
 </div>

@@ -10,11 +10,15 @@
 	});
 </script>
 <div id="block-answer-current">
-<?php echo $answer[0]->answer; ?>
+	<div class="text-answer"><?php echo $answer[0]->answer; ?></div>
+	<div class="text-uid"><?php echo $answer[0]->uid; ?></div>
 </div>
 <div id="block-all-comments">
 	<?php foreach($comments as $row): ?>
-		<?php echo $row->comment; ?>
+		<div class="block-this-comment">
+			<div class="text-comment"><?php echo $row->comment; ?></div>
+			<div class="text-comment-uid">Posted by <?php echo $row->uid; ?></div>
+		</div>
 	<?php endforeach; ?>
 </div>
 <div id="block-form-comment">

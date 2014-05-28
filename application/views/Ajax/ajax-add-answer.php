@@ -9,8 +9,8 @@
 	});
 </script>
 <?php foreach ($answers as $row): ?>
-	<div class="block-this-answer">
+	<div class="block-this-answer" value="<?php echo $row->id; ?>">
 		<div class="text-answer"><?php echo $row->answer; ?></div>
-		<div class="text-uid">Posté par <?php echo $row->uid; ?></div>
+		<div class="text-uid">Posted by  <?php echo $row->uid; ?></div>
 	</div>
 <?php endforeach; ?>

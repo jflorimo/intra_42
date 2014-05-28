@@ -681,13 +681,47 @@ body
 {
 	cursor:pointer;
 }
-
-
 #block-list-comment
 {
 	position:absolute;
 	top:1em;
 	left:65em;
+}
+#block-answer-current
+{
+	width:60em;
+	margin-top:1em;
+	border:0.1em solid #2A2A38;
+	border-radius: 5px 5px;
+	-moz-border-radius: 5px 5px;
+	-webkit-border-radius: 5px 5px;
+}
+.block-this-comment
+{
+	width:40em;
+	margin-bottom: 1em;
+	background-color: #486182;
+	margin-top:1em;
+	border:0.1em solid #2A2A38;
+	border-radius: 5px 5px;
+	-moz-border-radius: 5px 5px;
+	-webkit-border-radius: 5px 5px;
+}
+.text-comment
+{
+	padding:0.8em;
+	text-align:center;
+	font-family: "Oswald";
+    font-size:0.9em;
+    color:#FFFFFF;
+}
+.text-comment-uid
+{
+	margin-left:30em;
+	padding-bottom: 0.5em;
+	font-size:1em;
+	font-family:"Poiret One";
+	color:#FFFFFF;
 }
 
 /*		-----				*/

@@ -174,5 +174,14 @@ class Admins extends CI_Controller
 			redirect("admins/board_modules");
 	}
 
+	public function board_tickets()
+	{
+		$this->load->model('TicketsModel');
+		$this->load->view("main/header");
+		$this->load->view("admins/board-menu");
+		$data["tickets"] = $this->TicketsModel->get_all_ticket();
+		$this->load->view('admins/board-tickets', $data);
+		$this->load->view("main/footer");
+	}
 }
 ?>

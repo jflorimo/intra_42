@@ -14,6 +14,7 @@
 </head>
 <body>
 <div id="block-header">
+	<img id="image-42" src="<?php echo base_url(); ?>/images/logo42.png"/>
 	<div id='block-menu'>
 	<a href='<?php echo site_url("forum")?>' class="link-menu">Forum</a>
 		<a href='<?php echo site_url("users")?>/yearbook?letter=A' class="link-menu">Yearbook</a>

@@ -148,30 +148,109 @@ class Admins extends CI_Controller
 		}
 	}
 
+	public function change_date($old_date)
+	{
+		$split =  split('/', $old_date);
+		$temp = $split[0];
+		$temp2 = $split[1];
+		$split[0] = $split[2];
+		$split[1] = $temp;
+		$split[2] = $temp2;
+		$new_date = join('-', $split);
+		return $new_date;
+	}
+
 	public function add_module()
 	{
-		$this->load->model("ModulesModel");
-		if ($this->input->post("name"))
+		$this->form_validation->set_rules('nbplaces', 'Places', 'trim|required|xss_clean|numeric');
+		$this->form_validation->set_rules('nbcredits', 'Credits', 'trim|required|xss_clean|numeric');
+		$this->form_validation->set_rules('start', 'Start', 'trim|required');
+		$this->form_validation->set_rules('end', 'End', 'trim|required');
+
+		if ($this->form_validation->run())
 		{
-			if ($this->input->post("semestres") != "nochoice")
+			$this->load->model("ModulesModel");	
+			$this->load->model("CategoriesModel");
+			if ($this->input->post("name"))
 			{
-				$data = array(
-					"name" => $this->input->post("name"),
-					// "description" => $this->input->post("description"),
-					// "nbplaces" => $this->input->post("nbplaces"),
-					// "start" => $this->input->post("start"),
-					// "end" => $this->input->post("end"),
-					// "nbcredits" => $this->input->post("nbcredits"),
-					"id_semestres" => $this->input->post("semestres")
-				);
-				$this->ModulesModel->insert_module($data);
-				redirect("admins/board_modules");
+				if ($this->input->post("semestres") != "nochoice")
+				{
+					$start = $this->change_date($this->input->post("start"));
+					$end = $this->change_date($this->input->post("end"));
+					// echo $this->input->post("end");
+					// echo $end;
+					$data = array(
+						"name" => $this->input->post("name"),
+						"description" => $this->input->post("description"),
+						"nbplaces" => $this->input->post("nbplaces"),
+						"start" => $start,
+						"end" => $end,
+						"nbcredits" => $this->input->post("nbcredits"),
+						"id_semestres" => $this->input->post("semestres")
+					);
+					$this->ModulesModel->insert_module($data);
+					$data = array(
+						"name" => $this->input->post("name"),
+						"type" => 1
+						);
+					$this->CategoriesModel->insert_category($data);
+				}
 			}
-			else
-				redirect("admins/board_modules");	
 		}
-		else
-			redirect("admins/board_modules");
+		redirect("admins/board_modules");
+	}
+
+	public function board_activities()
+	{
+		$this->load->model("ActivitiesModel");
+		$this->load->model("ModulesModel");
+		$this->load->view("main/header");
+		$this->load->view("admins/board-menu");
+		$data["modules"] = $this->ModulesModel->get_all_module();
+		$data["activities"] = $this->ActivitiesModel->get_all_activite();
+		$this->load->view("admins/board-activities",$data);
+		$this->load->view("main/footer");
+	}
+
+	public function ajax_delete_activite()
+	{
+		if ($this->input->post("id"))
+		{
+			$this->load->model("ActivitiesModel");
+			$this->CategoriesModel->delete_activite($this->input->post("id"));
+		}
+	}
+
+	public function add_activite()
+	{
+		$this->form_validation->set_rules('sizegroup', 'Size', 'trim|required|xss_clean|numeric');
+		$this->form_validation->set_rules('nbcorrections', 'Corrections', 'trim|required|xss_clean|numeric');
+		$this->form_validation->set_rules('start', 'Start', 'trim|required');
+		$this->form_validation->set_rules('end', 'End', 'trim|required');
+
+		if ($this->form_validation->run())
+		{
+			$this->load->model("ActivitiesModel");
+			if ($this->input->post("name"))
+			{
+				if ($this->input->post("activities") != "nochoice")
+				{
+					$start = $this->change_date($this->input->post("start"));
+					$end = $this->change_date($this->input->post("end"));
+					$data = array(
+						"name" => $this->input->post("name"),
+						"description" => $this->input->post("description"),
+						"sizegroup" => $this->input->post("sizegroup"),
+						"start" => $start,
+						"end" => $end,
+						"nbcorrections" => $this->input->post("nbcorrections"),
+						"id_modules" => $this->input->post("modules")
+					);
+					$this->ActivitiesModel->insert_activite($data);
+				}
+			}
+		}
+		redirect("admins/board_activities");
 	}
 
 	public function board_tickets()

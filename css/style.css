@@ -863,6 +863,32 @@ body
 	color:#5C9299;
 	cursor:pointer;
 }
+#textarea-description-modules
+{
+	margin-top:1em;
+    width:40em;
+    height:10em;
+    max-width:40em;
+    max-height:10em;
+    border-left:0.1em solid #2A2A38;
+    border-bottom:0.1em solid #2A2A38;
+    font-family: "Oswald";
+    font-size:0.9em;
+    color:#5C9299;
+    background-color: transparent;
+    outline:none;
+}
+#input-number-modules
+{
+	width:3em;
+	margin-left:2em;
+	border:none;
+	border-bottom:0.1em solid #2A2A38;
+	outline:none;
+	background-color:transparent;
+	color:#5C9299;
+	font-family:"Oswald";
+}
 
 /*		-----				*/
 /*		----------			*/

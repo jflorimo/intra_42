@@ -208,6 +208,18 @@ body
 	font-size:1em;
 	cursor:pointer;
 }
+#submit-my-tickets
+{
+	width:8em;
+	margin-top:1em;
+	text-align:center;
+	margin-top:1em;
+	border:0.1em solid #2A2A38;
+	color:#5C9299;
+	font-family:"Oswald";
+	font-size:1em;
+	cursor:pointer;
+}
 #message-switch-to-admin-ok
 {
 	color:#5C9299;

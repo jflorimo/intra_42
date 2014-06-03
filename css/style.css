@@ -322,7 +322,22 @@ body
 	left:50%;
 	margin-left: -30em;
 }
-
+#submit-add-ticket
+{
+	margin-left: -0.04em;
+	position:absolute;
+	top:15.5em;
+	border:0.1em solid #2A2A38;
+	outline:none;
+	background-color:transparent;
+	color:#5C9299;
+	font-family:"Oswald";
+	font-size:1em;
+}
+#submit-add-ticket:hover
+{
+	cursor: pointer;
+}
 /*		-----				*/
 /*		----------			*/
 /*		BLOCK-YEARBOOK		*/

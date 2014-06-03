@@ -14,7 +14,7 @@
 	<?php foreach($tickets as $row): ?>
 	<tr>
 	<?php if($row->uid_admins == NULL): ?>
-		<td class="td-info-categories"><a href='<?php echo site_url("tickets")?>/thisticket?id=<?php echo $row->id; ?>' class='link-ticket'><?php echo $row->subject; ?></a> by <?php echo $row->uid_users; ?></td>
+		<td class="td-info-categories"><a href='<?php echo site_url("tickets")?>/this_tickets?id=<?php echo $row->id; ?>' class='link-ticket'><?php echo $row->subject; ?></a> by <?php echo $row->uid_users; ?></td>
 		<?php if ($row->uid_admins == NULL): ?>
 			<td class="td-info-categories">Pas encore assigné</td>
 		<?php else: ?>
@@ -31,7 +31,7 @@
 	</div>
 	<?php elseif($row->uid_admins == $this->session->userdata("uid")): ?>
 	<div class="block-ticket-assign">
-		<td class="td-info-categories"><a href='<?php echo site_url("tickets")?>/thisticket?id=<?php echo $row->id; ?>' class='link-ticket'><?php echo $row->subject; ?></a> by <?php echo $row->uid_users; ?></td>
+		<td class="td-info-categories"><a href='<?php echo site_url("tickets")?>/this_tickets?id=<?php echo $row->id; ?>' class='link-ticket'><?php echo $row->subject; ?></a> by <?php echo $row->uid_users; ?></td>
 		<?php if ($row->uid_admins == NULL): ?>
 			<td class="td-info-categories">Pas encore assigné</td>
 		<?php else: ?>

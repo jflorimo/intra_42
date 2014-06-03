@@ -220,6 +220,11 @@ body
 	font-size:1em;
 	cursor:pointer;
 }
+#submit-my-tickets a
+{
+	color:#5C9299;
+	text-decoration:none;
+}
 #message-switch-to-admin-ok
 {
 	color:#5C9299;
@@ -261,6 +266,63 @@ body
 	font-family:"Poiret One";
 	color:#2A2A38;
 }
+
+/*		-----				*/
+/*		----------			*/
+/*		BLOCK-TICKETS		*/
+/*		----------			*/
+/*		-----				*/
+#title-assign-tickets
+{
+	color:#5C9299;
+	text-align: center;
+	font-family:"Oswald";
+	font-size:1.5em;
+}
+#form-assign-tickets
+{
+	position:absolute;
+	top:9.5em;
+	left:50%;
+	margin-left: -2.5em;
+}
+#submit-add-tickets
+{
+	position:absolute;
+	top:2.5em;
+	border:0.1em solid #2A2A38;
+	outline:none;
+	background-color:transparent;
+	color:#5C9299;
+	font-family:"Oswald";
+	font-size:1em;
+	margin-left: 0.8em;
+}
+#block-add-tickets
+{
+	text-align: center;
+}
+#link-add-tickets
+{
+	color:#5C9299;
+	font-family:"Oswald";
+	font-size:1em;
+	text-decoration: none;
+}
+#link-add-tickets:hover
+{
+	color:#2A2A38;
+	font-family:"Oswald";
+	font-size:1em;
+	text-decoration: none;
+}
+#block-answer-ticket
+{
+	position:absolute;
+	left:50%;
+	margin-left: -30em;
+}
+
 /*		-----				*/
 /*		----------			*/
 /*		BLOCK-YEARBOOK		*/

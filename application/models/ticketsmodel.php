@@ -29,5 +29,22 @@ class TicketsModel extends CI_Model
         $this->db->where("id", $id);
         $this->db->update("tickets",$data);
     }
+
+    public function get_thisticket($id)
+    {
+        $query = $this->db->select("*")->from("tickets")->where("id", $id)->get();
+        return $query->result();
+    }
+
+    public function get_answertickets($id)
+    {
+        $query = $this->db->select("*")->from("answer_tickets")->where("id_tickets", $id)->get();
+        return $query->result();
+    }
+
+    public function add_answertickets($data)
+    {
+        $this->db->insert("answer_tickets",$data);
+    }
 }
 ?>

@@ -8,4 +8,5 @@ RewriteRule ^(.*)$	index.php/$1 	[L]
 #reecriture si ce n'est ni un fichier ni un dossier
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(index\.php|assets/|uploads/|robots\.txt)
 RewriteRule ^(.*)$	index.php/$1 	[L]

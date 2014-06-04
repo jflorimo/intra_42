@@ -40,5 +40,14 @@ class CategoriesModel extends CI_Model
         $query = $this->db->select("*")->from("categories")->where("id", $id)->get();
         return $query->result();
     }
+
+    public function get_category_with_module($id)
+    {
+        $query = $this->db->select("*")->from("modules")->where("id", $id)->get();
+        $modules = $query->result();
+        print_r($modules);
+        $query2 = $this->db->select("id")->from("categories")->where("name", $modules[0]->name)->get();
+        return $query2->result();
+    }
 }
 ?>

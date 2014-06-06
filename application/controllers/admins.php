@@ -331,6 +331,7 @@ class Admins extends CI_Controller
 			}
 		}
 		// redirect('admins/board_elearning?id='.$_GET["id"].'');
+		}
 	}
 
 	public function board_tickets()

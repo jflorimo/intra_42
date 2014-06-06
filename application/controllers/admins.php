@@ -231,26 +231,163 @@ class Admins extends CI_Controller
 		if ($this->form_validation->run())
 		{
 			$this->load->model("ActivitiesModel");
+			$this->load->model("CategoriesModel");
+			$this->load->model("SouscategoriesModel");
 			if ($this->input->post("name"))
 			{
 				if ($this->input->post("activities") != "nochoice")
 				{
-					$start = $this->change_date($this->input->post("start"));
-					$end = $this->change_date($this->input->post("end"));
-					$data = array(
-						"name" => $this->input->post("name"),
-						"description" => $this->input->post("description"),
-						"sizegroup" => $this->input->post("sizegroup"),
-						"start" => $start,
-						"end" => $end,
-						"nbcorrections" => $this->input->post("nbcorrections"),
-						"id_modules" => $this->input->post("modules")
-					);
-					$this->ActivitiesModel->insert_activite($data);
+					if (isset($_FILES['userfile']))
+					{
+						$uploaddir = './uploads/';
+						$uploadfile =$uploaddir  . basename($_FILES['userfile']['name']);
+						if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile))
+						{
+							$uploaded = substr_replace($uploadfile, base_url(), 0, 2);
+							$start = $this->change_date($this->input->post("start"));
+							$end = $this->change_date($this->input->post("end"));
+							$data = array(
+								"name" => $this->input->post("name"),
+								"description" => $this->input->post("description"),
+								"sizegroup" => $this->input->post("sizegroup"),
+								"start" => $start,
+								"end" => $end,
+								"nbcorrections" => $this->input->post("nbcorrections"),
+								"id_modules" => $this->input->post("modules"),
+								"auto" => $this->input->post("generator"), 
+								"type" => $this->input->post("type"),
+								"sujet" => $uploaded
+							);
+							$this->ActivitiesModel->insert_activite($data);
+							$result = $this->CategoriesModel->get_category_with_module($this->input->post("modules"));
+							$data = array(
+								"id_categories" => $result['0']->id,
+								"name" => $this->input->post("name")
+								);
+							$this->SouscategoriesModel->insert_souscategory($data);
+						}
+					}
 				}
 			}
 		}
 		redirect("admins/board_activities");
+	}
+
+
+	public function board_elearning()
+	{
+		$this->load->model("ElearningModel");
+		$this->load->view("main/header");
+		$this->load->view("admins/board-menu");
+		$data["elearning"] = $this->ElearningModel->get_all_elearning($_GET['id']);
+		$this->load->view("admins/board-elearning",$data);
+		$this->load->view("main/footer");
+	}
+
+	public function ajax_delete_elearning()
+	{
+		if ($this->input->post("id"))
+		{
+			$this->load->model("ElearningModel");
+			$this->ElearningModel->delete_elearning($this->input->post("id"));
+		}
+	}
+
+	public function add_elearning()
+	{
+		echo "here";
+		$this->load->model("ElearningModel");
+		echo "hereafter";
+		echo "yo".$this->input->post("name");
+		// var_dump($this);
+		if ($this->form_validation->run())
+		{
+		if ($this->input->post("name"))
+		{
+			echo "here1";
+			if ($this->input->post("elearning") != "nochoice")
+			{
+				echo "here2";
+				if (isset($_FILES['userfile']))
+				{
+					echo "here3";
+					$uploaddir = './videos/';
+					print_r($uploaddir);
+					$uploadfile =$uploaddir  . basename($_FILES['userfile']['name']);
+					print_r($uploadfile);
+					print_r($_FILES['userfile']);
+					if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile))
+					{
+						$uploaded = substr_replace($uploadfile, base_url(), 0, 2);
+						$data = array(
+							"name" => $this->input->post("name"),
+							"video" => $uploaded
+						);
+						$this->ElearningModel->insert_elearning($data);	
+					}
+				}
+			}
+		}
+		// redirect('admins/board_elearning?id='.$_GET["id"].'');
+	}
+
+	public function board_tickets()
+	{
+		$this->load->model('TicketsModel');
+		$this->load->view("main/header");
+		$this->load->view("admins/board-menu");
+		$data["tickets"] = $this->TicketsModel->get_all_ticket();
+		$this->load->view('admins/board-tickets', $data);
+		$this->load->view("main/footer");
+	}
+
+	public function assign_tickets()
+	{
+		$this->load->model('TicketsModel');
+		$this->load->model("AdminsModel");
+		$this->load->view("main/header");
+		$this->load->view("admins/board-menu");
+		if ($this->input->post("uid_admins"))
+		{
+			$data = array(
+				"uid_admins" => $this->input->post("uid_admins")
+			);
+			$this->TicketsModel->edit_assign($data, $this->input->post("id"));
+			redirect("admins/board_tickets");
+		}
+		else
+		{
+			$data["admins"] = $this->AdminsModel->get_all_admin();
+			$data["id"] = $_GET["id"];
+			$this->load->view('admins/board-assign-tickets', $data);
+		}
+		$this->load->view("main/footer");
+	}
+
+	public function close_tickets()
+	{
+		$this->load->model('TicketsModel');
+		if ($_GET["id"])
+		{
+			$data = array(
+				"etat" => 1
+			);
+			$this->TicketsModel->open_or_close($data, $_GET["id"]);
+		}
+		redirect("admins/board_tickets");
+	}
+
+	public function open_tickets()
+	{
+		$this->load->model('TicketsModel');
+		if ($_GET["id"])
+		{
+			$data = array(
+				"etat" => 0
+			);
+			$this->TicketsModel->open_or_close($data, $_GET["id"]);
+		}
+		redirect("admins/board_tickets");
 	}
 }
 ?>

@@ -96,7 +96,7 @@
             <td class="td-info-categories"><?php echo $row->auto; ?></td>
             <td class="td-info-categories"><?php echo $row->type; ?></td>
             <td class="td-info-categories"><?php echo $row->description; ?></td>
-            <td class="td-info-categories"><a href="http://codeigniter.local.42.fr:8080/admins/board_elearning">E-Learning</a></td>
+            <td class="td-info-categories"><a href="http://codeigniter.local.42.fr:8080/admins/board_elearning?id=<?php echo $row->id; ?>">Add video</a></td>
 			<td class="td-info-categories link-delete-category" value="<?php echo $row->id; ?>">Delete</td>
 		</tr>
 	<?php endforeach; ?>

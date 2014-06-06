@@ -1,9 +1,9 @@
 <?php 
 class ElearningModel extends CI_Model
 {
-	public function get_all_elearning()
+	public function get_all_elearning($id)
     {
-    	$query = $this->db->select("*")->from("elearning")->get();
+    	$query = $this->db->select("*")->from("elearning")->where("id", $id)->get();
     	return $query->result();
     }
 

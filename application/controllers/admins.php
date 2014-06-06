@@ -288,7 +288,7 @@ class Admins extends CI_Controller
 		$this->load->model("ElearningModel");
 		$this->load->view("main/header");
 		$this->load->view("admins/board-menu");
-		$data["elearning"] = $this->ElearningModel->get_all_elearning();
+		$data["elearning"] = $this->ElearningModel->get_all_elearning($_GET['id']);
 		$this->load->view("admins/board-elearning",$data);
 		$this->load->view("main/footer");
 	}
@@ -304,15 +304,42 @@ class Admins extends CI_Controller
 
 	public function add_elearning()
 	{
+		echo "here";
 		$this->load->model("ElearningModel");
+		echo "hereafter";
+		echo "yo".$this->input->post("name");
+		// var_dump($this);
+		if ($this->form_validation->run())
+		{
 		if ($this->input->post("name"))
 		{
-			$data = array(
-				"titre" => $this->input->post("name")
-			);
-			$this->ElearningModel->insert_elearning($data);
-			redirect("admins/board_elearning");
+			echo "here1";
+			if ($this->input->post("elearning") != "nochoice")
+			{
+				echo "here2";
+				if (isset($_FILES['userfile']))
+				{
+					echo "here3";
+					$uploaddir = './videos/';
+					print_r($uploaddir);
+					$uploadfile =$uploaddir  . basename($_FILES['userfile']['name']);
+					print_r($uploadfile);
+					print_r($_FILES['userfile']);
+					if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile))
+					{
+						$uploaded = substr_replace($uploadfile, base_url(), 0, 2);
+						$data = array(
+							"name" => $this->input->post("name"),
+							"video" => $uploaded
+						);
+						$this->ElearningModel->insert_elearning($data);
+						
+					}
+				}
+			}
 		}
+		// redirect('admins/board_elearning?id='.$_GET["id"].'');
+	}
 	}
 }
 ?>

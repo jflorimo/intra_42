@@ -1,37 +1,53 @@
-<div id="block-list-tickets">
+<div id="block-board-categories">
+	<div id="title-categories">Tickets</div>
+	<table id="block-info-categories">
+	<thead>
+	<tr>
+		<th class="th-label-categories">Name</th>
+		<th class="th-label-categories">Admin</th>
+		<th class="th-label-categories">Assigned</th>
+		<th class="th-label-categories">State</th>
+		<th class="th-label-categories">Change State</th>
+	</tr>
+	</thead>
+	<tbody>
 	<?php foreach($tickets as $row): ?>
-	<div class="block-ticket-no-assign">
-	<?php if($row->uid_admins != NULL): ?>
-		<a href='<?php echo site_url("tickets")?>/thisticket?id=<?php echo $row->id; ?>' class='link-ticket'><?php echo $row->subject; ?></a>
-		<?php if ($row->uid_admins != NULL): ?>
-			<span class="admins-ticket">Pas encore assigné</span>
+	<tr>
+	<?php if($row->uid_admins == NULL): ?>
+		<td class="td-info-categories"><a href='<?php echo site_url("tickets")?>/this_tickets?id=<?php echo $row->id; ?>' class='link-ticket'><?php echo $row->subject; ?></a> by <?php echo $row->uid_users; ?></td>
+		<?php if ($row->uid_admins == NULL): ?>
+			<td class="td-info-categories">Pas encore assigné</td>
 		<?php else: ?>
-			<span class="admins-ticket"><?php echo $row->uid_users; ?></span>
+			<td class="td-info-categories"><?php echo $row->uid_admins; ?></td>
 		<?php endif; ?>
-		<a href='<?php echo site_url("tickets")?>/assign?id=<?php echo $row->id; ?>' class='link-ticket'>Assigner</a>
+		<td class="td-info-categories"><a href='<?php echo site_url("admins")?>/assign_tickets?id=<?php echo $row->id; ?>' class='link-ticket'>Assigner</a>
 		<?php if ($row->etat == 0): ?>
-			<span class="etat-ticket">Ouvert</span>
+			<td class="td-info-categories">Ouvert</td>
+			<td class="td-info-categories"></td>
 		<?php else: ?>
-			<span class="etat-ticket">Fermé</span>
+			<td class="td-info-categories">Fermé</td>
+			<td class="td-info-categories"></td>
 		<?php endif; ?>
 	</div>
-	<?php elseif($row->uid_users == $this->session->userdata("adminslogin")): ?>
+	<?php elseif($row->uid_admins == $this->session->userdata("uid")): ?>
 	<div class="block-ticket-assign">
-		<a href='<?php echo site_url("tickets")?>/thisticket?id=<?php echo $row->id; ?>' class='link-ticket'><?php echo $row->subject; ?></a>
-		<?php if ($row->id_admins == 0): ?>
-			<span class="admins-ticket">Pas encore assigné</span>
+		<td class="td-info-categories"><a href='<?php echo site_url("tickets")?>/this_tickets?id=<?php echo $row->id; ?>' class='link-ticket'><?php echo $row->subject; ?></a> by <?php echo $row->uid_users; ?></td>
+		<?php if ($row->uid_admins == NULL): ?>
+			<td class="td-info-categories">Pas encore assigné</td>
 		<?php else: ?>
-			<span class="admins-ticket"><?php echo $row->uid_users; ?></span>
+			<td class="td-info-categories"><?php echo $row->uid_admins; ?></td>
 		<?php endif; ?>
-		<a href='<?php echo site_url("tickets")?>/assign?id=<?php echo $row->id; ?>' class='link-ticket'>Assigner</a>
+		<td class="td-info-categories"><a href='<?php echo site_url("admins")?>/assign_tickets?id=<?php echo $row->id; ?>' class='link-ticket'>Assigner</a>
 		<?php if ($row->etat == 0): ?>
-			<span class="etat-ticket">Ouvert</span>
-			<a href='<?php echo site_url("tickets")?>/closeadmins?id=<?php echo $row->id; ?>' class='link-ticket'>Fermer</a>
+			<td class="td-info-categories">Ouvert</td>
+			<td class="td-info-categories"><a href='<?php echo site_url("admins")?>/close_tickets?id=<?php echo $row->id; ?>' class='link-ticket'>Fermer</a>
 		<?php else: ?>
-			<span class="etat-ticket">Fermé</span>
-			<a href='<?php echo site_url("tickets")?>/openadmins?id=<?php echo $row->id; ?>' class='link-ticket'>Ouvrir</a>
+			<td class="td-info-categories">Fermé</td>
+			<td class="td-info-categories"><a href='<?php echo site_url("admins")?>/open_tickets?id=<?php echo $row->id; ?>' class='link-ticket'>Ouvrir</a>
 		<?php endif; ?>
-	</div>
 	<?php endif; ?>
+	</tr>
 	<?php endforeach; ?>
+	</tbody>
+	</table>
 </div>

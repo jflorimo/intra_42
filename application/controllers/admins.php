@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <?php
 class Admins extends CI_Controller
 {
@@ -394,4 +392,3 @@ class Admins extends CI_Controller
 	}
 }
 ?>
->>>>>>> FETCH_HEAD

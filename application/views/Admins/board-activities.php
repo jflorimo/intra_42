@@ -81,6 +81,7 @@
         <th class="th-label-categories">Description</th>
         <th class="th-label-categories">E-Learning</th>
 		<th class="th-label-categories">Delete</th>
+        <th class="th-label-categories">Generate PC</th>
 	</tr>
 	</thead>
 	<tbody>
@@ -96,8 +97,9 @@
             <td class="td-info-categories"><?php echo $row->auto; ?></td>
             <td class="td-info-categories"><?php echo $row->type; ?></td>
             <td class="td-info-categories"><?php echo $row->description; ?></td>
-            <td class="td-info-categories"><a href="http://codeigniter.local.42.fr:8080/admins/board_elearning?id=<?php echo $row->id; ?>">Add video</a></td>
+            <td class="td-info-categories"><a href="<?php echo base_url(); ?>admins/board_elearning?id=<?php echo $row->id; ?>">Add video</a></td>
 			<td class="td-info-categories link-delete-category" value="<?php echo $row->id; ?>">Delete</td>
+            <td class="td-info-categories"><a href="<?php echo base_url(); ?>admins/peergenerator">Generate</a></td>
 		</tr>
 	<?php endforeach; ?>
 	</tbody>

@@ -390,5 +390,10 @@ class Admins extends CI_Controller
 		}
 		redirect("admins/board_tickets");
 	}
+
+	public function peergenerator()
+	{
+		echo "generating ...";
+	}
 }
 ?>

@@ -25,7 +25,6 @@
 			<img id="image-user-account" src="https://cdn.42.fr/userprofil/profilview/<?php echo $user[0]["uid"][0]; ?>.jpg"/>
 		<?php endif; ?>
 	</div>
-
 	<div id="block-all-info-user-account">
 		<?php if (isset($user[0]["uid"][0])): ?>
 		<div class="block-info-user-account">
@@ -69,13 +68,23 @@
 		</div>
 		<?php endif; ?>
 	</div>
-
 	<?php if ($this->session->userdata("admin") == true): ?>
 		<div id="submit-go-admin-account" value=<?php echo $user[0]["uid"][0]; ?>>Switch to admin</div>
 		<div id="result-switch-to-admin"></div>
 	<?php endif; ?>
 	<div id="submit-my-tickets"><a href='<?php echo site_url("tickets")?>/my_tickets' class='link-ticket'>My tickets</a></div>
-
+	<div id="block-modules-users">
+		<h4>Les modules</h4>
+		<?php 
+			foreach($this->modulesmodel->get_all_module() as $mod)
+			{
+				if ($this->modulesmodel->is_iscrit($mod->id) > 0)
+					echo $mod->name." - <a href='".base_url()."users/desinscription?id=".$mod->id."'>se desinscrire</a><br/>";
+				else
+					echo $mod->name." - <a href='".base_url()."users/inscription?id=".$mod->id."'>s'inscrire</a><br/>";
+			}
+		?>
+	</div>
 	<?php if ($this->session->userdata("admin") == true): ?>
 		<?php if ($logs): ?>
 		<div id="title-logs">25 last logs</div>

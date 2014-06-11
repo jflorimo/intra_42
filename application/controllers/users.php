@@ -76,6 +76,7 @@ class Users extends CI_Controller
 
 	public function account()
 	{
+		$this->load->model("modulesmodel");
 		if (!($this->session->userdata("uid")))
 			redirect("/");
 		$this->load->view("main/header");
@@ -93,6 +94,24 @@ class Users extends CI_Controller
 		}
 		$this->load->view("users/account",$data);
 		$this->load->view("main/footer");
+	}
+
+	public function inscription()
+	{
+		$this->load->model("modulesmodel");
+		if (!($this->session->userdata("uid")))
+			redirect("/");
+		$this->modulesmodel->inscription_module($_GET['id']);
+		redirect("/");
+	}
+
+	public function desinscription()
+	{
+		$this->load->model("modulesmodel");
+		if (!($this->session->userdata("uid")))
+			redirect("/");
+		$this->modulesmodel->desinscription_module($_GET['id']);
+		redirect("/");		
 	}
 
 	public function yearbook()

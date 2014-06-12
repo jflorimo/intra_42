@@ -88,9 +88,23 @@
 					if ($this->modulesmodel->is_iscrit($mod->id) > 0)
 					{
 						if ($this->activitiesmodel->is_iscrit($act->id) > 0)
-							echo "<li>".$act->name." - <a href='".base_url()."users/desinscription_act?id=".$act->id."'>se desinscrire</a></li>";
+						{
+							echo "<li>".$act->name." - <a href='".base_url()."users/desinscription_act?id=".$act->id."'>se desinscrire</a>";
+							if ($this->session->userdata("admin") == true)
+							{
+								echo " - generate peer ";
+							}
+							echo"</li>";
+						}
 						else
-							echo "<li>".$act->name." - <a href='".base_url()."users/inscription_act?id=".$act->id."'>s'inscrire</a></li>";
+						{
+							echo "<li>".$act->name." - <a href='".base_url()."users/inscription_act?id=".$act->id."'>s'inscrire</a>";
+							if ($this->session->userdata("admin") == true)
+							{
+								echo " - generate peer ";
+							}
+							echo"</li>";
+						}
 					}	
 					echo "</ul>";
 				}

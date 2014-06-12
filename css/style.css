@@ -239,13 +239,21 @@ body
 }
 #block-modules-users
 {
-	border: 0.1em solid #2A2A38;
-	width: 25em;
-	font-family: "Poiret One";
+	margin-top:11em;
+	font-family:"Oswald";
+	border: 0.1em solid #5C9299;
+	width:35%;
+}
+#block-modules-users h4
+{
+	background-color: #5C9299;
+	width:100%;
+	height: 2em;
+	text-align: center;
+	font-family: "Oswald";
 	color: #2A2A38;
-	position:absolute;
-	top:80px;
-	left:65%;
+	margin:auto;
+	margin-bottom:15px;
 }
 #block-logs-user-account
 {

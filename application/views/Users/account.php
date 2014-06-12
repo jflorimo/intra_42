@@ -82,6 +82,18 @@
 					echo $mod->name." - <a href='".base_url()."users/desinscription?id=".$mod->id."'>se desinscrire</a><br/>";
 				else
 					echo $mod->name." - <a href='".base_url()."users/inscription?id=".$mod->id."'>s'inscrire</a><br/>";
+				foreach($this->activitiesmodel->get_activite_from_module_id($mod->id) as $act)
+				{
+					echo "<ul>";
+					if ($this->modulesmodel->is_iscrit($mod->id) > 0)
+					{
+						if ($this->activitiesmodel->is_iscrit($act->id) > 0)
+							echo "<li>".$act->name." - <a href='".base_url()."users/desinscription_act?id=".$act->id."'>se desinscrire</a></li>";
+						else
+							echo "<li>".$act->name." - <a href='".base_url()."users/inscription_act?id=".$act->id."'>s'inscrire</a></li>";
+					}	
+					echo "</ul>";
+				}
 			}
 		?>
 	</div>

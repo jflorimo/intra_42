@@ -77,6 +77,7 @@ class Users extends CI_Controller
 	public function account()
 	{
 		$this->load->model("modulesmodel");
+		$this->load->model("activitiesmodel");
 		if (!($this->session->userdata("uid")))
 			redirect("/");
 		$this->load->view("main/header");
@@ -111,6 +112,23 @@ class Users extends CI_Controller
 		if (!($this->session->userdata("uid")))
 			redirect("/");
 		$this->modulesmodel->desinscription_module($_GET['id']);
+		redirect("/");		
+	}
+	public function inscription_act()
+	{
+		$this->load->model("activitiesmodel");
+		if (!($this->session->userdata("uid")))
+			redirect("/");
+		$this->activitiesmodel->inscription_act($_GET['id']);
+		redirect("/");
+	}
+
+	public function desinscription_act()
+	{
+		$this->load->model("activitiesmodel");
+		if (!($this->session->userdata("uid")))
+			redirect("/");
+		$this->activitiesmodel->desinscription_act($_GET['id']);
 		redirect("/");		
 	}
 

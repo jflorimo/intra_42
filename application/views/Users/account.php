@@ -73,6 +73,8 @@
 		<div id="result-switch-to-admin"></div>
 	<?php endif; ?>
 	<div id="submit-my-tickets"><a href='<?php echo site_url("tickets")?>/my_tickets' class='link-ticket'>My tickets</a></div>
+	<div>
+	<?php if (!isset($_GET['uid'])): ?>
 	<div id="block-modules-users">
 		<h4>Les modules</h4>
 		<?php 
@@ -90,26 +92,26 @@
 						if ($this->activitiesmodel->is_iscrit($act->id) > 0)
 						{
 							echo "<li>".$act->name." - <a href='".base_url()."users/desinscription_act?id=".$act->id."'>se desinscrire</a>";
-							if ($this->session->userdata("admin") == true)
-							{
-								echo " - generate peer ";
-							}
-							echo"</li>";
 						}
 						else
 						{
 							echo "<li>".$act->name." - <a href='".base_url()."users/inscription_act?id=".$act->id."'>s'inscrire</a>";
-							if ($this->session->userdata("admin") == true)
-							{
-								echo " - generate peer ";
-							}
-							echo"</li>";
 						}
+						if ($this->session->userdata("admin") == true)
+						{
+							echo " - <a href='".base_url()."peer/generate_peer'>generate peer</a> ";
+						}
+						echo"</li>";
 					}	
 					echo "</ul>";
 				}
 			}
 		?>
+	</div>
+	<div id="block-peer-users">
+		<h4>Paires notations</h4>
+	</div>
+	<?php endif; ?>
 	</div>
 	<?php if ($this->session->userdata("admin") == true): ?>
 		<?php if ($logs): ?>

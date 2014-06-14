@@ -46,6 +46,12 @@ class ActivitiesModel extends CI_Model
         $query = $this->db->query("select * from inscrit_act where id_act=$idAct and uid='".$this->session->userdata("uid")."'");
         return(count($query->result()));
     }
+
+    public function nb_inscrit($idAct)
+    {
+        $query = $this->db->query("select * from inscrit_act where id_act=$idAct and uid='".$this->session->userdata("uid")."'");
+        return(count($query->result()));
+    }
 }
 
 ?>

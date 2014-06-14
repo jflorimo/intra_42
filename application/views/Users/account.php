@@ -99,9 +99,9 @@
 						}
 						if ($this->session->userdata("admin") == true)
 						{
-							echo " - <a href='".base_url()."peer/generate_peer'>generate peer</a> ";
+							echo " - <a href='".base_url()."peer/generate_peer?id_act=$act->id'>generate peer</a> ";
 						}
-						echo"</li>";
+						echo "(".$this->activitiesmodel->nb_inscrit($act->id)." inscrits)</li>";
 					}	
 					echo "</ul>";
 				}

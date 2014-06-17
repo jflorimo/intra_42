@@ -1,3 +1,12 @@
+/*
+COLOR
+#FF665D red
+#FF745D orange red
+#486182 bleu
+#313536 gris fonce
+#35363B gris plus claire
+*/
+
 body 
 {
 	margin:0;
@@ -10,9 +19,10 @@ body
 /*		-----				*/
 #block-header
 {
+	background-color: #35363B;
 	width:100%;
 	height:4.5em;
-	border-bottom:0.1em solid #2A2A38;
+	border-bottom:0.1em solid rgba(0, 0, 0, 0.15);
 }
 #image-42
 {
@@ -33,12 +43,12 @@ body
 .link-menu
 {
 	text-decoration:none;
-	color:#5C9299;
+	color:#FF745D;
 	font-family:"Oswald";
 }
 .link-menu:hover
 {
-	color:#2A2A38;
+	color:rgba(255, 255, 255, 0.8);
 }
 #block-connexion-header
 {
@@ -60,18 +70,19 @@ body
 #uid-user
 {
 	text-decoration:none;
-	color:#2A2A38;
-	font-family:"Poiret One";
+	color:#486182;
+	font-weight:500;
+	font-family:"Oswald";
 }
 #link-connexion
 {
 	text-decoration:none;
-	color:#5C9299;
+	color:#FF745D;
 	font-family:"Oswald";
 }
 #link-connexion:hover
 {
-	color:#2A2A38;
+	color:rgba(255, 255, 255, 0.8);
 }
 
 /*		-----				*/
@@ -90,7 +101,7 @@ body
 #title-connexion
 {
 	margin-bottom: 1em;
-	color:#5C9299;
+	color:#FF745D;
 	text-align:center;
 	font-family:"Oswald";
 	font-size:1.5em;
@@ -109,7 +120,7 @@ body
 	border-bottom:0.1em solid #2A2A38;
 	outline:none;
 	background-color:transparent;
-	color:#5C9299;
+	color:#FF745D;
 	font-family:"Oswald";
 }
 #input-password-connexion
@@ -119,7 +130,7 @@ body
 	border:none;
 	border-bottom:0.1em solid #2A2A38;
 	outline:none;
-	color:#5C9299;
+	color:#FF745D;
 	font-family:"Oswald";
 	background-color:transparent;
 }
@@ -132,7 +143,7 @@ body
 	border:0.1em solid #2A2A38;
 	outline:none;
 	background-color:transparent;
-	color:#5C9299;
+	color:#FF745D;
 	font-family:"Oswald";
 	font-size:1em;
 }
@@ -160,7 +171,7 @@ body
 #title-account
 {
 	margin-bottom: 1em;
-	color:#5C9299;
+	color:#FF745D;
 	text-align:center;
 	font-family:"Oswald";
 	font-size:1.5em;
@@ -193,7 +204,7 @@ body
 }
 .info-user-account
 {
-	color:#5C9299;
+	color:#FF745D;
 	font-family:"Oswald";
 	font-size:1em;
 }
@@ -203,7 +214,7 @@ body
 	text-align:center;
 	margin-top:16em;
 	border:0.1em solid #2A2A38;
-	color:#5C9299;
+	color:#FF745D;
 	font-family:"Oswald";
 	font-size:1em;
 	cursor:pointer;
@@ -215,19 +226,19 @@ body
 	text-align:center;
 	margin-top:1em;
 	border:0.1em solid #2A2A38;
-	color:#5C9299;
+	color:#FF745D;
 	font-family:"Oswald";
 	font-size:1em;
 	cursor:pointer;
 }
 #submit-my-tickets a
 {
-	color:#5C9299;
+	color:#FF745D;
 	text-decoration:none;
 }
 #message-switch-to-admin-ok
 {
-	color:#5C9299;
+	color:#FF745D;
 	font-family:"Oswald";
 	font-size:0.9em;
 }
@@ -241,13 +252,13 @@ body
 {
 	margin-top:11em;
 	font-family:"Oswald";
-	border: 0.1em solid #5C9299;
+	border: 0.1em solid #FF745D;
 	width:35%;
 	display:inline-block;
 }
 #block-modules-users h4
 {
-	background-color: #5C9299;
+	background-color: #FF745D;
 	width:100%;
 	height: 2em;
 	text-align: center;
@@ -260,14 +271,14 @@ body
 {
 	margin-top:11em;
 	font-family:"Oswald";
-	border: 0.1em solid #5C9299;
+	border: 0.1em solid #FF745D;
 	width:35%;
 	display:inline-block;
 	vertical-align:top;
 }
 #block-peer-users h4
 {
-	background-color: #5C9299;
+	background-color: #FF745D;
 	width:100%;
 	height: 2em;
 	text-align: center;
@@ -285,11 +296,11 @@ body
 	margin-top:2em;
 	font-family:"Oswald";
 	font-size:1.5em;
-	color:#5C9299;
+	color:#FF745D;
 }
 .td-label-logs
 {
-	background-color:#5C9299;
+	background-color:#FF745D;
 	width:15em;
 	height:2em;
 	text-align:center;
@@ -313,7 +324,7 @@ body
 /*		-----				*/
 #title-assign-tickets
 {
-	color:#5C9299;
+	color:#FF745D;
 	text-align: center;
 	font-family:"Oswald";
 	font-size:1.5em;
@@ -332,7 +343,7 @@ body
 	border:0.1em solid #2A2A38;
 	outline:none;
 	background-color:transparent;
-	color:#5C9299;
+	color:#FF745D;
 	font-family:"Oswald";
 	font-size:1em;
 	margin-left: 0.8em;
@@ -343,7 +354,7 @@ body
 }
 #link-add-tickets
 {
-	color:#5C9299;
+	color:#FF745D;
 	font-family:"Oswald";
 	font-size:1em;
 	text-decoration: none;
@@ -369,7 +380,7 @@ body
 	border:0.1em solid #2A2A38;
 	outline:none;
 	background-color:transparent;
-	color:#5C9299;
+	color:#FF745D;
 	font-family:"Oswald";
 	font-size:1em;
 }
@@ -386,7 +397,7 @@ body
 {
 	width:100%;
 	height:2em;
-	background-color:#5C9299;
+	background-color:#FF745D;
 	text-align:center;
 }
 #block-search-uid-yearbook
@@ -421,7 +432,7 @@ body
 .link-uid-search-yearbook
 {
 	text-decoration: none;
-	color:#5C9299;
+	color:#FF745D;
 	font-family:"Poiret One";
 	font-size:1.1em;
 }
@@ -454,7 +465,7 @@ body
 }
 #title-letter-yearbook
 {
-	color:#5C9299;
+	color:#FF745D;
 	text-align: center;
 	font-family:"Oswald";
 	font-size:1.5em;
@@ -475,7 +486,7 @@ body
 }
 .uid-user-yearbook:hover
 {
-	color:#5C9299;
+	color:#FF745D;
 }
 .td-image-yearbook
 {
@@ -484,7 +495,7 @@ body
 }
 .th-label-yearbook
 {
-	background-color:#5C9299;
+	background-color:#FF745D;
 	width:15em;
 	height:2em;
 	text-align:center;
@@ -511,7 +522,7 @@ body
 {
 	width:100%;
 	height:2em;
-	background-color:#5C9299;
+	background-color:#FF745D;
 	text-align:center;
 }
 .link-board-menu
@@ -534,6 +545,7 @@ body
 /*		-----				*/
 #block-board-forum
 {
+	background-color: #35363B;
 	width:16em;
 	height:100%;
 	position:absolute;
@@ -546,7 +558,7 @@ body
 }
 .block-name-categories:hover
 {
-	background-color:#D6D2E5;
+	background-color:#40424B;
 	cursor:pointer;
 }
 .name1-categories-forum
@@ -558,7 +570,7 @@ body
 }
 .name2-categories-forum
 {
-	color:#5C9299;
+	color:#FF745D;
 	margin-left:1em;
 	font-family:"Oswald";
 	font-size:1.1em;
@@ -569,7 +581,7 @@ body
 }
 .block-name-souscategories:hover
 {
-	background-color:#D6D2E5;
+	background-color:#40424B;
 	cursor:pointer;
 }
 .name-souscategories-forum
@@ -577,7 +589,7 @@ body
 	margin-left: 2em;
 	font-size:1em;
 	font-family:"Poiret One";
-	color:#2A2A38;
+	color:#888888;
 }
 #block-threads-forum
 {
@@ -600,7 +612,7 @@ body
 	margin-top: 1em;
 	font-size:1em;
 	font-family:"Oswald";
-	color:#5C9299;
+	color:#FF745D;
 }
 #label-subject-thread
 {
@@ -615,7 +627,7 @@ body
 	border-bottom:0.1em solid #2A2A38;
 	outline:none;
 	background-color:transparent;
-	color:#5C9299;
+	color:#FF745D;
 	font-family:"Oswald";
 }
 #textarea-description-thread
@@ -629,7 +641,7 @@ body
     border-bottom:0.1em solid #2A2A38;
     font-family: "Oswald";
     font-size:0.9em;
-    color:#5C9299;
+    color:#FF745D;
     background-color: transparent;
     outline:none;
 }
@@ -641,7 +653,7 @@ body
 	border:0.1em solid #2A2A38;
 	outline:none;
 	background-color:transparent;
-	color:#5C9299;
+	color:#FF745D;
 	font-family:"Oswald";
 	font-size:1em;
 }
@@ -703,7 +715,7 @@ body
 	text-align:center;
 	font-family: "Oswald";
     font-size:0.9em;
-    color:#5C9299;
+    color:#FF745D;
 }
 #title-threads-uid
 {
@@ -733,7 +745,7 @@ body
 	text-align:center;
 	font-family: "Oswald";
     font-size:0.9em;
-    color:#5C9299;
+    color:#FF745D;
 }
 .text-uid
 {
@@ -748,7 +760,7 @@ body
 	margin-top: 1em;
 	font-size:1em;
 	font-family:"Oswald";
-	color:#5C9299;
+	color:#FF745D;
 }
 #textarea-answer-thread
 {
@@ -761,7 +773,7 @@ body
     border-bottom:0.1em solid #2A2A38;
     font-family: "Oswald";
     font-size:0.9em;
-    color:#5C9299;
+    color:#FF745D;
     background-color: transparent;
     outline:none;
 }
@@ -771,7 +783,7 @@ body
 	border:0.1em solid #2A2A38;
 	outline:none;
 	background-color:transparent;
-	color:#5C9299;
+	color:#FF745D;
 	font-family:"Oswald";
 	font-size:1em;
 	margin-bottom: 4em;
@@ -786,7 +798,7 @@ body
 	margin-top: 1em;
 	font-size:1em;
 	font-family:"Oswald";
-	color:#5C9299;
+	color:#FF745D;
 }
 #textarea-comment-answer
 {
@@ -799,7 +811,7 @@ body
     border-bottom:0.1em solid #2A2A38;
     font-family: "Oswald";
     font-size:0.9em;
-    color:#5C9299;
+    color:#FF745D;
     background-color: transparent;
     outline:none;
 }
@@ -809,7 +821,7 @@ body
 	border:0.1em solid #2A2A38;
 	outline:none;
 	background-color:transparent;
-	color:#5C9299;
+	color:#FF745D;
 	font-family:"Oswald";
 	font-size:1em;
 	margin-bottom: 4em;
@@ -868,7 +880,7 @@ body
 /*		-----				*/
 #title-admins
 {
-	color:#5C9299;
+	color:#FF745D;
 	text-align: center;
 	font-family:"Oswald";
 	font-size:1.5em;
@@ -883,7 +895,7 @@ body
 }
 .th-label-admins
 {
-	background-color:#5C9299;
+	background-color:#FF745D;
 	width:15em;
 	height:2em;
 	text-align:center;
@@ -901,7 +913,7 @@ body
 }
 .link-delete-admin:hover
 {
-	color:#5C9299;
+	color:#FF745D;
 	cursor:pointer;
 }
 
@@ -913,7 +925,7 @@ body
 /*		-----					*/
 #title-categories
 {
-	color:#5C9299;
+	color:#FF745D;
 	text-align: center;
 	font-family:"Oswald";
 	font-size:1.5em;
@@ -926,7 +938,7 @@ body
 }
 #title-add-category
 {
-	color:#5C9299;
+	color:#FF745D;
 	font-family:"Oswald";
 	font-size:1.2em;
 }
@@ -944,7 +956,7 @@ body
 	border-bottom:0.1em solid #2A2A38;
 	outline:none;
 	background-color:transparent;
-	color:#5C9299;
+	color:#FF745D;
 	font-family:"Oswald";
 }
 #submit-add-category
@@ -953,7 +965,7 @@ body
 	border:0.1em solid #2A2A38;
 	outline:none;
 	background-color:transparent;
-	color:#5C9299;
+	color:#FF745D;
 	font-family:"Oswald";
 	font-size:1em;
 }
@@ -970,7 +982,7 @@ body
 }
 .th-label-categories
 {
-	background-color:#5C9299;
+	background-color:#FF745D;
 	width:15em;
 	height:2em;
 	text-align:center;
@@ -988,7 +1000,7 @@ body
 }
 .link-delete-category:hover
 {
-	color:#5C9299;
+	color:#FF745D;
 	cursor:pointer;
 }
 #textarea-description-modules
@@ -1002,7 +1014,7 @@ body
     border-bottom:0.1em solid #2A2A38;
     font-family: "Oswald";
     font-size:0.9em;
-    color:#5C9299;
+    color:#FF745D;
     background-color: transparent;
     outline:none;
 }
@@ -1014,7 +1026,7 @@ body
 	border-bottom:0.1em solid #2A2A38;
 	outline:none;
 	background-color:transparent;
-	color:#5C9299;
+	color:#FF745D;
 	font-family:"Oswald";
 }
 

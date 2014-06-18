@@ -171,7 +171,7 @@ body
 #title-account
 {
 	margin-bottom: 1em;
-	color:#FF745D;
+	color:#486182;
 	text-align:center;
 	font-family:"Oswald";
 	font-size:1.5em;
@@ -204,7 +204,7 @@ body
 }
 .info-user-account
 {
-	color:#FF745D;
+	color:#486182;
 	font-family:"Oswald";
 	font-size:1em;
 }
@@ -214,7 +214,7 @@ body
 	text-align:center;
 	margin-top:16em;
 	border:0.1em solid #2A2A38;
-	color:#FF745D;
+	color:#486182;
 	font-family:"Oswald";
 	font-size:1em;
 	cursor:pointer;
@@ -226,14 +226,14 @@ body
 	text-align:center;
 	margin-top:1em;
 	border:0.1em solid #2A2A38;
-	color:#FF745D;
+	color:#486182;
 	font-family:"Oswald";
 	font-size:1em;
 	cursor:pointer;
 }
 #submit-my-tickets a
 {
-	color:#FF745D;
+	color:#486182;
 	text-decoration:none;
 }
 #message-switch-to-admin-ok
@@ -252,18 +252,18 @@ body
 {
 	margin-top:11em;
 	font-family:"Oswald";
-	border: 0.1em solid #FF745D;
+	border: 0.1em solid #486182;
 	width:35%;
 	display:inline-block;
 }
 #block-modules-users h4
 {
-	background-color: #FF745D;
+	background-color: #486182;
 	width:100%;
 	height: 2em;
 	text-align: center;
 	font-family: "Oswald";
-	color: #2A2A38;
+	color: #FFFFFF;
 	margin:auto;
 	margin-bottom:15px;
 }
@@ -271,19 +271,19 @@ body
 {
 	margin-top:11em;
 	font-family:"Oswald";
-	border: 0.1em solid #FF745D;
+	border: 0.1em solid #486182;
 	width:35%;
 	display:inline-block;
 	vertical-align:top;
 }
 #block-peer-users h4
 {
-	background-color: #FF745D;
+	background-color: #486182;
 	width:100%;
 	height: 2em;
 	text-align: center;
 	font-family: "Oswald";
-	color: #2A2A38;
+	color: #FFFFFF;
 	margin:auto;
 	margin-bottom:15px;
 }
@@ -296,16 +296,16 @@ body
 	margin-top:2em;
 	font-family:"Oswald";
 	font-size:1.5em;
-	color:#FF745D;
+	color:#486182;
 }
 .td-label-logs
 {
-	background-color:#FF745D;
+	background-color:#486182;
 	width:15em;
 	height:2em;
 	text-align:center;
 	font-family:"Oswald";
-	color:#2A2A38;
+	color:#FFFFFF;
 }
 .td-info-logs
 {
@@ -397,7 +397,7 @@ body
 {
 	width:100%;
 	height:2em;
-	background-color:#FF745D;
+	background-color:#486182;
 	text-align:center;
 }
 #block-search-uid-yearbook
@@ -414,7 +414,7 @@ body
 	width:15em;
 	border:0.1em solid #FFFFFF;
 	outline:none;
-	background-color:#2A2A38;
+	background-color:#35363B;
 	font-family:"Poiret One";
 	font-size:1em;
 	color:#FFFFFF;
@@ -425,7 +425,7 @@ body
 	min-height:2em;
 	margin-top:0.2em;
 	margin-left:2.3em;
-	background-color:#2A2A38;
+	background-color:#35363B;
 	text-align:center;
 	color:#FFFFFF;
 }
@@ -447,14 +447,14 @@ body
 .link-yearbook-menu
 {
 	text-decoration: none;
-	color:#2A2A38;
+	color:#FFFFFF;
 	font-family:"Oswald";
 	font-size:1.2em;
 	margin-left:1em;
 }
 .link-yearbook-menu:hover
 {
-	color:#FFFFFF;
+	color:rgba(255, 255, 255, 0.8);
 }
 #block-yearbook
 {
@@ -465,7 +465,7 @@ body
 }
 #title-letter-yearbook
 {
-	color:#FF745D;
+	color:#486182;
 	text-align: center;
 	font-family:"Oswald";
 	font-size:1.5em;
@@ -495,12 +495,12 @@ body
 }
 .th-label-yearbook
 {
-	background-color:#FF745D;
+	background-color:#486182;
 	width:15em;
 	height:2em;
 	text-align:center;
 	font-family:"Oswald";
-	color:#2A2A38;
+	color:#FFFFFF;
 	cursor:pointer;
 }
 .td-info-yearbook
@@ -522,20 +522,20 @@ body
 {
 	width:100%;
 	height:2em;
-	background-color:#FF745D;
+	background-color:#486182;
 	text-align:center;
 }
 .link-board-menu
 {
 	text-decoration: none;
-	color:#2A2A38;
+	color:#FFFFFF;
 	font-family:"Oswald";
 	font-size:1.2em;
 	margin-left:1em;
 }
 .link-board-menu:hover
 {
-	color:#FFFFFF;
+	color:rgba(255, 255, 255, 0.8);
 }
 
 /*		-----				*/
@@ -547,7 +547,7 @@ body
 {
 	background-color: #35363B;
 	width:16em;
-	height:100%;
+	height: 100%;
 	position:absolute;
 	padding-top: 1em;
 	border-right:0.1em solid #2A2A38;
@@ -612,7 +612,7 @@ body
 	margin-top: 1em;
 	font-size:1em;
 	font-family:"Oswald";
-	color:#FF745D;
+	color:#486182;
 }
 #label-subject-thread
 {
@@ -641,7 +641,7 @@ body
     border-bottom:0.1em solid #2A2A38;
     font-family: "Oswald";
     font-size:0.9em;
-    color:#FF745D;
+    color:#486182;
     background-color: transparent;
     outline:none;
 }
@@ -653,7 +653,7 @@ body
 	border:0.1em solid #2A2A38;
 	outline:none;
 	background-color:transparent;
-	color:#FF745D;
+	color:#486182;
 	font-family:"Oswald";
 	font-size:1em;
 }
@@ -672,11 +672,11 @@ body
 	width:36.5em;
 	height:2.5em;
 	margin-bottom:1em;
-	background-color:#2A2A38;
+	background-color:#40424B;
 }
 .block-this-thread:hover
 {
-	background-color:#486182;
+	background-color:#FF745D;
 	cursor:pointer;
 }
 .subject-thread
@@ -715,7 +715,7 @@ body
 	text-align:center;
 	font-family: "Oswald";
     font-size:0.9em;
-    color:#FF745D;
+    color:#40424B;
 }
 #title-threads-uid
 {
@@ -745,7 +745,7 @@ body
 	text-align:center;
 	font-family: "Oswald";
     font-size:0.9em;
-    color:#FF745D;
+    color:#40424B;
 }
 .text-uid
 {
@@ -760,7 +760,7 @@ body
 	margin-top: 1em;
 	font-size:1em;
 	font-family:"Oswald";
-	color:#FF745D;
+	color:#486182;
 }
 #textarea-answer-thread
 {
@@ -773,7 +773,7 @@ body
     border-bottom:0.1em solid #2A2A38;
     font-family: "Oswald";
     font-size:0.9em;
-    color:#FF745D;
+    color: #486182;
     background-color: transparent;
     outline:none;
 }
@@ -783,7 +783,7 @@ body
 	border:0.1em solid #2A2A38;
 	outline:none;
 	background-color:transparent;
-	color:#FF745D;
+	color:#486182;
 	font-family:"Oswald";
 	font-size:1em;
 	margin-bottom: 4em;
@@ -798,7 +798,7 @@ body
 	margin-top: 1em;
 	font-size:1em;
 	font-family:"Oswald";
-	color:#FF745D;
+	color:#486182;
 }
 #textarea-comment-answer
 {
@@ -811,7 +811,7 @@ body
     border-bottom:0.1em solid #2A2A38;
     font-family: "Oswald";
     font-size:0.9em;
-    color:#FF745D;
+    color:#486182;
     background-color: transparent;
     outline:none;
 }
@@ -821,7 +821,7 @@ body
 	border:0.1em solid #2A2A38;
 	outline:none;
 	background-color:transparent;
-	color:#FF745D;
+	color:#486182;
 	font-family:"Oswald";
 	font-size:1em;
 	margin-bottom: 4em;
@@ -880,7 +880,7 @@ body
 /*		-----				*/
 #title-admins
 {
-	color:#FF745D;
+	color:#486182;
 	text-align: center;
 	font-family:"Oswald";
 	font-size:1.5em;
@@ -895,12 +895,12 @@ body
 }
 .th-label-admins
 {
-	background-color:#FF745D;
+	background-color:#486182;
 	width:15em;
 	height:2em;
 	text-align:center;
 	font-family:"Oswald";
-	color:#2A2A38;
+	color:#FFFFFF;
 }
 .td-info-admins
 {
@@ -925,7 +925,7 @@ body
 /*		-----					*/
 #title-categories
 {
-	color:#FF745D;
+	color:#486182;
 	text-align: center;
 	font-family:"Oswald";
 	font-size:1.5em;
@@ -938,7 +938,7 @@ body
 }
 #title-add-category
 {
-	color:#FF745D;
+	color:#486182;
 	font-family:"Oswald";
 	font-size:1.2em;
 }
@@ -956,7 +956,7 @@ body
 	border-bottom:0.1em solid #2A2A38;
 	outline:none;
 	background-color:transparent;
-	color:#FF745D;
+	color:#486182;
 	font-family:"Oswald";
 }
 #submit-add-category
@@ -965,7 +965,7 @@ body
 	border:0.1em solid #2A2A38;
 	outline:none;
 	background-color:transparent;
-	color:#FF745D;
+	color:#486182;
 	font-family:"Oswald";
 	font-size:1em;
 }
@@ -982,12 +982,12 @@ body
 }
 .th-label-categories
 {
-	background-color:#FF745D;
+	background-color:#486182;
 	width:15em;
 	height:2em;
 	text-align:center;
 	font-family:"Oswald";
-	color:#2A2A38;
+	color:#FFFFFF;
 }
 .td-info-categories
 {
@@ -1014,7 +1014,7 @@ body
     border-bottom:0.1em solid #2A2A38;
     font-family: "Oswald";
     font-size:0.9em;
-    color:#FF745D;
+    color:#486182;
     background-color: transparent;
     outline:none;
 }
